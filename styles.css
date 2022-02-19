@@ -1,0 +1,205 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Spartan", sans-serif;
+  font-size: 1.5rem;
+
+  background: url(images/bg-pattern-top-desktop.svg),
+    url(images/bg-pattern-bottom-desktop.svg);
+  background-repeat: no-repeat, no-repeat;
+  background-position: left top, right bottom;
+}
+
+.container {
+  width: 85%;
+  max-width: 120rem;
+  margin: 10rem auto;
+}
+
+.service-ratings-section {
+  display: flex;
+  gap: 10rem;
+  justify-content: space-between;
+  margin-bottom: 5rem;
+}
+
+.service-ratings__header {
+  flex-basis: 50%;
+}
+
+.service-ratings {
+  flex-basis: 50%;
+  align-content: center;
+  justify-content: center;
+}
+
+.service-rating {
+  display: flex;
+  gap: 3rem;
+  background-color: hsl(300, 24%, 96%);
+  padding: 1.5rem 2rem;
+  border-radius: 8px;
+}
+
+.service-rating:nth-child(1) {
+  align-self: flex-start;
+}
+.service-rating:nth-child(2) {
+  align-self: center;
+}
+.service-rating:nth-child(3) {
+  align-self: flex-end;
+}
+
+.service-ratings {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.service-rating-text {
+  font-weight: 700;
+  color: hsl(300, 43%, 22%);
+}
+
+.service-ratings__heading {
+  font-size: 4.8rem;
+  color: hsl(300, 43%, 22%);
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  letter-spacing: -1px;
+}
+
+.service-rating-stars {
+  white-space: nowrap;
+}
+
+.service-users {
+  font-size: 5.6rem;
+}
+
+.service-ratings__description {
+  font-size: 1.8rem;
+  color: hsl(303, 10%, 53%);
+  line-height: 1.8;
+}
+
+.customers-testimonials {
+  display: flex;
+  justify-content: space-between;
+  min-height: 25rem;
+  gap: 3rem;
+}
+
+.customer-testimonial {
+  background-color: hsl(300, 43%, 22%);
+  border-radius: 8px;
+  padding: 4rem 3rem;
+}
+
+.customer-testimonial:nth-child(1) {
+  align-self: flex-start;
+}
+
+.customer-testimonial:nth-child(2) {
+  align-self: center;
+}
+
+.customer-testimonial:nth-child(3) {
+  align-self: flex-end;
+}
+
+.customer-testimonial__image {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+}
+
+.customer-testimonial__name {
+  color: hsl(0, 0%, 100%);
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+}
+
+.customer-testimonial__state {
+  color: hsl(333, 80%, 67%);
+}
+
+.customer-testimonial__text {
+  color: hsl(300, 24%, 96%);
+  font-size: 1.4rem;
+  line-height: 1.6;
+}
+
+.testimonial-header {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 1200px) {
+  .service-ratings-section {
+    flex-direction: column;
+    gap: 6rem;
+  }
+
+  .customers-testimonials {
+    min-height: 28rem;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+}
+
+@media screen and (max-width: 890px) {
+  .customers-testimonials {
+    flex-direction: column;
+  }
+
+  .service-ratings-section {
+    gap: 4rem;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  body {
+    background: url(images/bg-pattern-top-mobile.svg),
+      url(images/bg-pattern-bottom-mobile.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: left top, right bottom;
+  }
+
+  .service-ratings .service-rating {
+    align-self: center;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .service-ratings__header {
+    text-align: center;
+  }
+
+  .service-ratings__heading {
+    margin-bottom: 2.6rem;
+  }
+}
+
+@media screen and (max-width: 485px) {
+  .service-rating {
+    gap: 1rem;
+    flex-direction: column;
+    align-items: center;
+  }
+}
